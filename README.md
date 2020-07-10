@@ -19,3 +19,9 @@ conda env create -f environment.yml
 conda activate myenv
 ```
 
+In addition, the kBET package for R needs to be installed, and here are the instructions from https://github.com/theislab/kBET, to be run the the R console:
+
+```bash
+library(devtools)
+install_github('theislab/kBET')
+```
