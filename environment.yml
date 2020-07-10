@@ -1,4 +1,4 @@
-name: lincs
+name: myenv
 channels:
 - conda-forge
 dependencies:
