@@ -1,6 +1,8 @@
 name: myenv
+
 channels:
 - conda-forge
+
 dependencies:
 - conda-forge::pandas=1.0.1
 - conda-forge::tabulate=0.8.7
