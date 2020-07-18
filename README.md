@@ -1,6 +1,6 @@
 # Examining Batch Effects on Cell Painting Data
 
-This project examines the presence of batch effects in (high-throughput) single-cell morphology data of different strains of cells subjected to various perturbations.
+This project examines the presence of batch effects in (high-throughput) single-cell morphology data.
 In addition to evaluating the benefits of the kBET detection algorithm, Harmony is used to correct for the observed batch effect. Ultimately, the goal is to benchmark these two processes and evaluate their effectiveness on the LINCS cell morphology data.
 
 @TODO update README
