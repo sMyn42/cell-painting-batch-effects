@@ -15,7 +15,7 @@ After installing conda, execute the following to install and navigate to the env
 conda env create -f environment.yml
 
 # Then, activate the environment and you're all set!
-conda activate cp-batch-effect
+conda activate myenv
 ```
 
 In addition, the kBET package for R needs to be installed, and here are the instructions from https://github.com/theislab/kBET, to be run the the R console:
