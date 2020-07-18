@@ -4,8 +4,6 @@ This project examines the presence of batch effects in (high-throughput) single-
 We use [kBET](https://github.com/theislab/kBET) to first detect the extent of batch effects, and then [Harmony](https://github.com/immunogenomics/harmony) to adjust for them.
 Ultimately, our goal is to benchmark these two processes and evaluate their effectiveness single cell Cell Painting data.
 
-@TODO update README
-
 ## Computational Environment
 
 We use [conda](https://docs.conda.io/en/latest/) to manage the computational environment.
