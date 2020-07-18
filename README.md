@@ -1,7 +1,8 @@
 # Examining Batch Effects on Cell Painting Data
 
 This project examines the presence of batch effects in (high-throughput) single-cell morphology data.
-In addition to evaluating the benefits of the kBET detection algorithm, Harmony is used to correct for the observed batch effect. Ultimately, the goal is to benchmark these two processes and evaluate their effectiveness on the LINCS cell morphology data.
+We use [kBET](https://github.com/theislab/kBET) to first detect the extent of batch effects, and then [Harmony](https://github.com/immunogenomics/harmony) to adjust for them.
+Ultimately, our goal is to benchmark these two processes and evaluate their effectiveness single cell Cell Painting data.
 
 @TODO update README
 
