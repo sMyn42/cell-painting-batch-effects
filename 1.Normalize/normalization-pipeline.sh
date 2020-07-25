@@ -14,30 +14,23 @@ jupyter nbconvert --to=script \
         --FilesWriter.build_directory=scripts/nbconverted \
         *.ipynb
 
-jupyter nbconvert --to=html \
-        --FilesWriter.build_directory=scripts/html \
-        --ExecutePreprocessor.kernel_name=python3 \
-        --ExecutePreprocessor.timeout=10000000 \
-        --execute 0.Create-csvs.ipynb 
+Rscript "0.Create-csvs.R" $1 $2 
 
 # Step 1, 2, and 3: Normalize Data and Remove Features With Low Variance or Missing Values
 
-jupyter nbconvert --to=html \
-        --FilesWriter.build_directory=scripts/html \
+jupyter nbconvert --to=notebook \
         --ExecutePreprocessor.kernel_name=python3 \
-        --ExecutePreprocessor.timeout=10000000 \
-        --execute 1.Cell-Data-Normalization.ipynb
+        --ExecutePreprocessor.timeout=600 \
+        --execute "1.Cell-Data-Normalization.ipynb"
 
-jupyter nbconvert --to=html \
-        --FilesWriter.build_directory=scripts/html \
+jupyter nbconvert --to=notebook \
         --ExecutePreprocessor.kernel_name=python3 \
-        --ExecutePreprocessor.timeout=10000000 \
-        --execute 2.Cell-Data-Normalization.ipynb       
+        --ExecutePreprocessor.timeout=600 \
+        --execute "2.Cell-Data-Normalization.ipynb"       
 
-jupyter nbconvert --to=html \
-        --FilesWriter.build_directory=scripts/html \
+jupyter nbconvert --to=notebook \
         --ExecutePreprocessor.kernel_name=python3 \
-        --ExecutePreprocessor.timeout=10000000 \
-        --execute 3.Cell-Data-Normalization.ipynb       
+        --ExecutePreprocessor.timeout=600 \
+        --execute "3.Cell-Data-Normalization.ipynb"       
 
 
