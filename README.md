@@ -18,10 +18,17 @@ conda env create -f environment.yml
 # Then, activate the environment and you're all set!
 conda activate myenv
 ```
-
+ ```
 In addition, the kBET package for R needs to be installed, and here are the instructions from https://github.com/theislab/kBET, to be run the the R console:
 
 ```bash
 library(devtools)
 install_github('theislab/kBET')
+```
+If needed, also install the "FNN" package through ```bash install.packages("FNN") ```
+
+Likewise, install the [Harmony](https://github.com/immunogenomics/harmony) package from Github
+
+```bash
+install_github("immunogenomics/harmony")
 ```
