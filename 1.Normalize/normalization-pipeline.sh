@@ -11,8 +11,12 @@ set -e
 
 # Step 0: Convert all notebooks to scripts and create CSVs of the data using R
 jupyter nbconvert --to=script \
-        --FilesWriter.build_directory=scripts/nbconverted \
+        --FilesWriter.build_directory=../scripts/nbconverted \
         *.ipynb
+
+cd ..
+mkdir -p data
+cd "1.Normalize/"
 
 Rscript "0.Create-csvs.R" $1 $2 
 
@@ -21,16 +25,19 @@ Rscript "0.Create-csvs.R" $1 $2
 jupyter nbconvert --to=notebook \
         --ExecutePreprocessor.kernel_name=python3 \
         --ExecutePreprocessor.timeout=600 \
+        --inplace \
         --execute "1.Cell-Data-Normalization.ipynb"
 
 jupyter nbconvert --to=notebook \
         --ExecutePreprocessor.kernel_name=python3 \
         --ExecutePreprocessor.timeout=600 \
+        --inplace \
         --execute "2.Cell-Data-Normalization.ipynb"       
 
 jupyter nbconvert --to=notebook \
         --ExecutePreprocessor.kernel_name=python3 \
         --ExecutePreprocessor.timeout=600 \
-        --execute "3.Cell-Data-Normalization.ipynb"       
+        --inplace \
+        --execute "3.Cell-Data-Normalization.ipynb"              
 
 

@@ -36,6 +36,10 @@ main_function <- function(filepath, platemappath){
 
 argslist = commandArgs(trailingOnly=TRUE)
 
-main_function(argslist[1], argslist[2])
+if(length(argslist) != 2){
+    stop("Incorrect number of arguments: 2 arguments are needed, the data file path and platemap file path.")
+} else {
+    main_function(argslist[1], argslist[2])
+}
 
 
