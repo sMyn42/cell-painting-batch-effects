@@ -22,6 +22,7 @@ dependencies:
 - conda-forge::r-essentials
 - conda-forge::jupyterlab=2.2.0
 - conda-forge::pip=20.1.1
+- conda-forge::r-reticulate=1.10
 
 - pip:
   - git+https://github.com/cytomining/pycytominer@dd064c2185435e19541bafa7c976d55da15cf09e
